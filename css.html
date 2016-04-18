@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	/*.one li{
+		background:pink;
+	}*/
+	.one>li{
+		background:pink;
+	}
+	.list p:only-child{
+		background:blue;
+	}
+	.one :nth-child(2){
+		background: purple;
+	}
+	.one :nth-last-child(2){
+		background:green;
+	}
+	.one li:first-child{
+		background:green;
+	}
+	p:empty{
+		background:red;
+	}
+	/* 同辈 */
+	.one li+span{
+		background:#4e4e4e;
+	}
+	</style>
+</head>
+<body>
+	<ul class="one">
+		<li>001</li>
+		<span>000</span>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+		<li>005</li>
+		<li>006</li>
+		<li>007</li>
+		<li>008</li>
+		<li>009</li>
+		<li>010</li>
+	</ul>
+	<div class="list">
+		<p>p标签</p>
+	</div>
+	<p style="width:200px;height:200px;"></p>
+</body>
+</html>

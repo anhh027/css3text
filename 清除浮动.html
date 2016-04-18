@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box{
+		width:600px;
+		/*height:600px;*/
+		border:1px solid green;
+	}
+	.inner{
+		width:100px;
+		height:100px;
+		background:#ccc;
+		float:left;
+		margin:10px;
+	}
+	/* 清除浮动 */
+	.clf:before,.clf:after{
+		content:"";
+		display:block;
+		clear:both;
+		/* width:100px;
+		height:100px;
+		background:url(GA.png)no-repeat 10px 0; */
+	}
+	</style>
+</head>
+<body>
+	<div class="box clf">
+		<div class="inner"><a href="maoLink.html#one ">001</a></div>
+		<div class="inner">002</div>
+		<div class="inner">003</div>
+		<div class="inner">004</div>
+		<div class="inner">005</div>
+		<div class="inner">006</div>
+		<div class="inner">007</div>
+		<div class="inner">008</div>
+		<div class="inner">009</div>
+		<div class="inner">010</div>
+	</div>
+</body>
+</html>
