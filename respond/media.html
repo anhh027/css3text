@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.out{
+		height: 300px;
+		width:500px;
+		/*margin:50px auto;*/
+	}
+	/* 设备类型  屏幕大于1200px */
+	@media screen and (min-width:1200px){
+		.out{
+			background-color: blue;
+		}
+	}
+	/* 设备类型  比1200小的 width 1000 */
+	@media screen and (max-width:1200px){
+		.out{
+			background-color: green;
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="out">
+		
+	</div>
+</body>
+</html>

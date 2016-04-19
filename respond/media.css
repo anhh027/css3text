@@ -1,0 +1,58 @@
+*{
+	box-sizing:border-box;
+}
+.out{
+	height:auto;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	margin :20px auto;
+}
+.clf:before,.clf:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.out .inner{
+	width:25%;
+	height:300px;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	float:left;
+}
+.out2{
+	height:auto;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	margin:0 auto;
+}
+.out2 .inner{
+	width:25%;
+	height:300px;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	float:left;
+}
+/* 设备类型  屏幕大于1200px */
+	@media screen and (min-width:1200px){
+		.out,.out2{
+			width: 1200px;
+		}
+	}
+	/* 设备类型  比1200小的 width 1000 */
+	@media screen and (max-width:1200px){
+		.out,.out2{
+			width: 1000px;
+		}
+		.out .inner{
+			width: 33.333333333%;
+		}
+		.out .inner:nth-last-of-type(3)~div{
+			display: none;
+		}
+		.out2 .inner{
+			width:33.333333333%;
+		}
+		.out2 .inner:nth-child(4n){
+			display:none;
+		}
+	}
