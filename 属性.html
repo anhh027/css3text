@@ -5,7 +5,9 @@
 	<title>Document</title>
 	<style>
 	[class]{
-
+		width:300px;
+		height:300px;
+		border:1px solid #555;
 	}
 	[href^=http]:before{
 		content:"超文本";
@@ -14,10 +16,18 @@
 		content:"安全";
 	}
 	[href^=ftp]:before{
-		content:"安全";
+		content:"文件";
 	}
 	[href^=mailto]:before{
 		content:"邮箱";
+	}
+	/* 包含//*/
+	[href*="//"]:before{
+		content:"a链接";
+	}
+	/* 包含//*/
+	[href$="com"]:after{
+		content:"以com结尾";
 	}
 	</style>
 </head>
@@ -40,9 +50,10 @@
 		<li>003</li>
 	</ul>
 	<ul>
-		<li><a href=""></a>></li>
-		<li></li>
-		<li></li>
+		<li><a href="http://www.baidu.com">百度一下</a></li>
+		<li><a href="https://www.baidu.com">百度一下</a></li>
+		<li><a href="ftp://www.baidu.com">百度一下</a></li>
+		<li><a href="mailto:798046494@qq.com">邮箱</a></li>
 	</ul>
 </body>
 </html>
